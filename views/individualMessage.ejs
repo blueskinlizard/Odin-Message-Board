@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=messageContent.author%></title>
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <ul class="postedMessage">
+        <li class="messageAuthor"><h1 class="titlePosted">Message by <%=messageContent.author%>:</h1></li>
+        <li class="messageContent"><p class="textPosted"><%=messageContent.text%></p></li>
+        <li class="messageDate"><p>Posted on <%=messageContent.timeAdded%></p></li>
+    </ul>
+    <a href="/">
+        <button class="newMessageButton">Back home</button>
+    </a>
+</body>
+</html>

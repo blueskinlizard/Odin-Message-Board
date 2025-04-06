@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+</head>
+<body>
+    <h1 class="title">Write your message:</h1>
+    <form class="submitForm" action="/new" method="POST">
+        <p class="textInputTitle">Username:</p>
+        <textarea id="usernameInput"name="name" class="textInput" name="message" rows="2" cols="25"></textarea>
+        <p class="textInputTitle">Content:</p>
+        <textarea id="contentInput" name="message" class="textInput" name="message" rows="10" cols="50"></textarea>
+        <button class="newMessageButton" >Send</button>
+    </form>
+</body>
+</html>

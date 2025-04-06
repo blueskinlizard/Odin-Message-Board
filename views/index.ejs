@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <title>Odin Messaging Board</title>
 </head>
 <body>
     <div class="messageContainer">
-        <h1>Odin Messaging Board</h1>
+        <h1 class="title">Odin Message Board</h1>
         <div class="messages">
             <% for(const message of messages){ %>
                 <a href="/message/<%= message.id %>">
-                    <ul>
-                        <li class="messageAuthor"><%= message.author %></li>
-                        <li class="messageContent"><%= message.text %></li>
+                    <ul class="postedMessage">
+                        <li class="messageAuthor"><h2 class="titlePosted"><%= message.author %></h2></li>
+                        <li class="messageContent"><h3 class="textPosted"><%= message.text %></h3></li>
                         <li class="messageDate"><%= message.timeAdded.toLocaleString() %></li>
                     </ul>
                 </a>
             <% } %>
+        </div>
+        <div class="buttonWrapper">
+            <a href="/new">
+            <button class="newMessageButton">Add Message</button>
+            </a>
         </div>
     </div>
 </body>
