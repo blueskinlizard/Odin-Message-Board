@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addMessage } from "../db";
+import { addMessage } from "../db.js";
 const newMessageRouter = Router();
 
 newMessageRouter.get("/new" , (req , res) => {

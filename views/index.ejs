@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <title>Odin Messaging Board</title>
+</head>
+<body>
+    <div class="messageContainer">
+        <h1>Odin Messaging Board</h1>
+        <div class="messages">
+            <% for(const message of messages){ %>
+                <a href="/message/<%= message.id %>">
+                    <ul>
+                        <li class="messageAuthor"><%= message.author %></li>
+                        <li class="messageContent"><%= message.text %></li>
+                        <li class="messageDate"><%= message.timeAdded.toLocaleString() %></li>
+                    </ul>
+                </a>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
